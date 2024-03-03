@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+// ignore: must_be_immutable
 class calculatorButton extends StatelessWidget {
   String text;
   void Function(String) onClicked;
@@ -16,10 +17,9 @@ class calculatorButton extends StatelessWidget {
             onClicked(text);
           },
           style: ElevatedButton.styleFrom(
-              backgroundColor: Colors.amberAccent,
-              shape: const RoundedRectangleBorder()
-              // foregroundColor: Colors.white
-              ),
+              backgroundColor: Colors.blue,
+              shape: const RoundedRectangleBorder(),
+              foregroundColor: Colors.white),
           child: Text(
             text,
             style: const TextStyle(

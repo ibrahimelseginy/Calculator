@@ -5,6 +5,7 @@ void main() {
   runApp(const calculatorApp());
 }
 
+// ignore: camel_case_types
 class calculatorApp extends StatelessWidget {
   const calculatorApp({super.key});
 
@@ -13,7 +14,7 @@ class calculatorApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       routes: {
-        calculatorScreen.routeName: (context) => const calculatorScreen(),
+        calculatorScreen.routeName: (_) => const calculatorScreen(),
       },
       initialRoute: calculatorScreen.routeName,
     );

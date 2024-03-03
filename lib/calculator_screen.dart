@@ -3,16 +3,20 @@
 import 'package:calculator/caclculator_button.dart';
 import 'package:flutter/material.dart';
 
-// StatelessWidget => one_class extends StatelessWidget
-// rebuild once time
-// class calculatorScreen extends StatelessWidget {
-//   static const String routeName = 'calculator';
-//   String resultText = '0';
+/*
+  types of State ??
+  
+1- StatelessWidget => 
+  1- one_class extends StatelessWidget
+  2- rebuild once time
 
-// StatefulWidget => two_class => class extends StatefulWidget (override => createState),
-//class  State extends StatefulWidget
-// rebuild every time => setState()=>in the StatefulWidget only
-
+2- StatefulWidget => 
+ 1- two_class => 
+    1- class extends StatefulWidget (override => createState)
+    2- class  State extends StatefulWidget
+ 2- rebuild every time => setState() => in the StatefulWidget only
+*/
+// ignore: camel_case_types
 class calculatorScreen extends StatefulWidget {
   static const String routeName = 'calculator';
 
@@ -22,15 +26,16 @@ class calculatorScreen extends StatefulWidget {
   State<calculatorScreen> createState() => _calculatorScreenState();
 }
 
+// ignore: camel_case_types
 class _calculatorScreenState extends State<calculatorScreen> {
-  String resultText = '';
+  String resultText = ' ';
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('calculator'),
-        backgroundColor: Colors.amber,
+        title: const Text('Calculator'),
+        backgroundColor: Colors.blue,
         centerTitle: true,
       ),
       body: Column(children: [
@@ -187,7 +192,7 @@ class _calculatorScreenState extends State<calculatorScreen> {
     setState(() {});
   }
 
-  void onEqualclicked(String Text) {
+  void onEqualclicked(String text) {
     if (savedNumber.isEmpty) {
       return;
     }
