@@ -1,5 +1,3 @@
-// import 'dart:js';
-
 import 'package:calculator/caclculator_button.dart';
 import 'package:flutter/material.dart';
 
@@ -210,24 +208,3 @@ class _calculatorScreenState extends State<calculatorScreen> {
     setState(() {});
   }
 }
-/*
-  '2' .toInt();
-extension numberParsing on String {
-  int toInt() {
-    int number = int.parse(this);
-    return number;
-  }
-}
-*/
-
-/*
-
-extension NavigatorExtension on BuildContext {
-  toView(Widget view) {
-    Navigator.push(this, MaterialPageRoute(builder: (context) {
-      return view;
-    }));
-  }
-}
-
-*/
